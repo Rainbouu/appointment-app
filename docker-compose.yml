@@ -1,3 +1,5 @@
+version "3.1"
+
 services:
 
   db:
@@ -38,9 +40,8 @@ services:
       - frontend
     healthcheck:
       test: [ "CMD","curl", "http://localhost:8080/api/health" ]
-      interval: 15m
+      interval: 5m
       timeout: 3s
-      start_period: 15s
       retries: 3
 
   front:
@@ -55,9 +56,8 @@ services:
       - frontend
     healthcheck:
       test: [ "CMD","curl", "http://localhost:3000" ]
-      interval: 15m
+      interval: 5m
       timeout: 3s
-      start_period: 15s
       retries: 3
 
 volumes:
