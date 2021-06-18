@@ -43,22 +43,22 @@ services:
       start_period: 15s
       retries: 3
 
-  front:
+#   front:
 
-    image: rainbovv/app-front
-    ports:
-      - "80:3000"
-    restart: on-failure
-    depends_on:
-      - back
-    networks:
-      - frontend
-    healthcheck:
-      test: [ "CMD","curl", "http://localhost:3000" ]
-      interval: 5m
-      timeout: 3s
-      start_period: 15s
-      retries: 3
+#     image: rainbovv/app-front
+#     ports:
+#       - "80:3000"
+#     restart: on-failure
+#     depends_on:
+#       - back
+#     networks:
+#       - frontend
+#     healthcheck:
+#       test: [ "CMD","curl", "http://localhost:3000" ]
+#       interval: 5m
+#       timeout: 3s
+#       start_period: 15s
+#       retries: 3
 
 volumes:
   db-data:
