@@ -45,7 +45,7 @@ services:
 
   front:
 
-    image: rainbovv/app-front
+    image: rainbovv/app-front:localhost
     ports:
       - "80:3000"
     restart: on-failure
